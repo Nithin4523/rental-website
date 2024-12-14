@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickRent - Rent Gadgets Hassle-Free</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        header nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        header .signup {
+            background: #fff;
+            color: #2575fc;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header .signup:hover {
+            background: #f4f4f9;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: #f4f4f9;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .hero button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #2575fc;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .hero button:hover {
+            background: #1a5dcf;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 40px 20px;
+            background: #fff;
+        }
+
+        .feature-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .gadgets {
+            padding: 40px 20px;
+            background: #f4f4f9;
+            text-align: center;
+        }
+
+        .gadget-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .gadget-card {
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .gadget-card h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .gadget-card p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .gadget-card button {
+            padding: 8px 16px;
+            font-size: 14px;
+            background: #2575fc;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .gadget-card button:hover {
+            background: #1a5dcf;
+        }
+
+        .contact {
+            padding: 40px 20px;
+            background: #fff;
+        }
+
+        .contact form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact form div {
+            margin-bottom: 15px;
+        }
+
+        .contact form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .contact form input, .contact form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact form button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #2575fc;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact form button:hover {
+            background: #1a5dcf;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 28px;
+            }
+
+            .features, .gadget-list {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>QuickRent</h1>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#gadgets">Gadgets</a>
+            <a href="#contact">Contact</a>
+            <a href="#signup" class="signup">Sign Up</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Rent Gadgets Hassle-Free</h2>
+        <p>Your go-to platform for renting gadgets at unbeatable prices. Discover, rent, and enjoy the latest tech!</p>
+        <button>Explore Rentals</button>
+    </section>
+
+    <section id="features" class="features">
+        <div class="feature-card">
+            <h3>Wide Selection</h3>
+            <p>Choose from a vast range of gadgets, including laptops, cameras, and gaming consoles.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Affordable Rates</h3>
+            <p>Enjoy competitive pricing that fits your budget without compromising quality.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Quick Delivery</h3>
+            <p>Receive your gadgets quickly and conveniently, right at your doorstep.</p>
+        </div>
+    </section>
+
+    <section id="gadgets" class="gadgets">
+        <h2>Available Gadgets</h2>
+        <div class="gadget-list">
+            <div class="gadget-card">
+                <h4>MacBook Pro</h4>
+                <p>$50/day</p>
+                <button>Rent Now</button>
+            </div>
+            <div class="gadget-card">
+                <h4>Canon DSLR</h4>
+                <p>$30/day</p>
+                <button>Rent Now</button>
+            </div>
+            <div class="gadget-card">
+                <h4>PlayStation 5</h4>
+                <p>$40/day</p>
+                <button>Rent Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <
+            <div>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 QuickRent. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+<section id="gadgets" class="gadgets">
+    <h2>Available Gadgets</h2>
+    <div class="gadget-list" role="list" aria-label="Available Gadgets">
+        <div class="gadget-card" role="listitem" aria-labelledby="gadget1">
+            <h4 id="gadget1">MacBook Pro</h4>
+            <p>$50/day</p>
+            <button>Rent Now</button>
+        </div>
+        <div class="gadget-card" role="listitem" aria-labelledby="gadget2">
+            <h4 id="gadget2">Canon DSLR</h4>
+            <p>$30/day</p>
+            <button>Rent Now</button>
+        </div>
+        <div class="gadget-card" role="listitem" aria-labelledby="gadget3">
+            <h4 id="gadget3">PlayStation 5</h4>
+            <p>$40/day</p>
+            <button>Rent Now</button>
+        </div>
+        <div class="gadget-card" role="listitem" aria-labelledby="gadget4">
+            <h4 id="gadget4">iPhone 14</h4>
+            <p>$25/day</p>
+            <button>Rent Now</button>
+        </div>
+        <div class="gadget-card" role="listitem" aria-labelledby="gadget5">
+            <h4 id="gadget5">GoPro Hero 11</h4>
+            <p>$20/day</p>
+            <button>Rent Now</button>
+        </div>
+        <div class="gadget-card" role="listitem" aria-labelledby="gadget6">
+            <h4 id="gadget6">Microsoft Surface Pro</h4>
+            <p>$35/day</p>
+            <button>Rent Now</button>
+        </div>
+    </div>
+</section>
